@@ -1,0 +1,45 @@
+{
+  "name": "@inkofpixel/liquid-loader",
+  "version": "0.0.1",
+  "description": "Webpack loader for custom liquid files",
+  "main": "dist/cjs.js",
+  "repository": "https://github.com/inkOfPixel/liquid-loader",
+  "author": "@forgng",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "webpack": "^5.0.0"
+  },
+  "scripts": {
+    "start": "yarn build -- -w",
+    "clean": "del-cli dist",
+    "prebuild": "yarn clean",
+    "build": "cross-env NODE_ENV=production babel src -d dist --copy-files",
+    "commitlint": "commitlint --from=main",
+    "security": "npm audit --production",
+    "lint:prettier": "prettier --list-different .",
+    "lint:js": "eslint --cache .",
+    "lint": "npm-run-all -l -p \"lint:**\"",
+    "pretest": "yarn lint",
+    "prepare": "husky install && yarn build",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "chalk": "4.1.1"
+  },
+  "devDependencies": {
+    "husky": "6.0.0",
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "del-cli": "^3.0.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
+  }
+}
