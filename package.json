@@ -23,8 +23,7 @@
     "lint:js": "eslint --cache .",
     "lint": "npm-run-all -l -p \"lint:**\"",
     "pretest": "yarn lint",
-    "prepare": "husky install && yarn build",
-    "release": "standard-version"
+    "prepare": "husky install && yarn build"
   },
   "dependencies": {
     "chalk": "4.1.1"
