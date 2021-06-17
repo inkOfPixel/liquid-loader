@@ -121,7 +121,10 @@ async function loader(content) {
         } else {
           resolve({
             ...module,
-            source: source.replace(/export default "/g, "").slice(0, -2),
+            source: source
+              .replace(/export default "/g, "")
+              .replace("/\\/g", "")
+              .slice(0, -2),
           });
         }
       });
