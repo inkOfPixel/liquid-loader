@@ -6,8 +6,6 @@ const path = require("path");
 const styleSheetExtensionRegExp = /s?css$/;
 
 async function loader(content) {
-  console.log("content", content);
-
   const callback = this.async();
 
   const resolveRequest = (context, request) => {
@@ -243,8 +241,6 @@ async function loader(content) {
     const sources = [];
     liquidModule.dependencies.forEach((module) => {
       if (styleSheetExtensionRegExp.test(module.extension)) {
-        console.log("module.source", module.source);
-
         sources.push(module.source);
       }
     });
@@ -264,7 +260,6 @@ async function loader(content) {
       const sectionSource = getSectionSource(module);
       const kB = sectionSource.length / 1024;
       const emitTime = new Date();
-      console.log("sectionSource", sectionSource);
 
       this.emitFile(`${sectionName}.liquid`, sectionSource);
       callback(null, getJSource(module));
