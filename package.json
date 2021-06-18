@@ -1,6 +1,6 @@
 {
   "name": "@inkofpixel/liquid-loader",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Webpack loader for custom liquid files",
   "main": "dist/cjs.js",
   "repository": "https://github.com/inkOfPixel/liquid-loader",
