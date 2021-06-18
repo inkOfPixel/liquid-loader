@@ -1,0 +1,20 @@
+{
+  "name": "404 Template",
+  "settings": [
+    {
+      "type": "header",
+      "content": "404"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Continue shopping"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ]
+}
