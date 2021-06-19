@@ -213,9 +213,6 @@ async function loader(content) {
   };
 
   const getSectionSource = (liquidModule) => `
-    {% stylesheet %}
-    ${getJSource(liquidModule)}
-    {% endstylesheet %}
   	{% stylesheet %}
   	${getCSSource(liquidModule)}
   	{% endstylesheet %}
